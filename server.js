@@ -1,11 +1,7 @@
-const express = require('express');
+const express = require('./src/app');
 
-const app = express();
-app.get('/',(req,res)=>{
-    res.send('Hello world')
-})
-app.get('/about',(req,res)=>{
-    res.send('About page')
-})
-app.listen(3000);
+
+app.listen(3000,()=>{//start the server on port 3000
+    console.log('Server is running on port 3000');
+});
 //update
