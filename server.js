@@ -1,4 +1,4 @@
-const express = require('./src/app');
+const app = require("./src/app");
 
 
 app.listen(3000,()=>{//start the server on port 3000

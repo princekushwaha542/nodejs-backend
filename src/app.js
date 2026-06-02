@@ -1,10 +1,15 @@
 const express = require('express');
 
 const app = express(); //create a server using express
-app.get('/',(req,res)=>{
-    res.send('Hello world')
-})
-app.get('/about',(req,res)=>{
-    res.send('About page')
+// app.get('/',(req,res)=>{
+//     res.send('Hello world')
+// })
+// app.get('/about',(req,res)=>{
+//     res.send('About page')
+// })
+const notes=[]
+
+app.post('/notes',(req,res)=>{
+    console.log(req.body);
 })
 module.exports = app;
