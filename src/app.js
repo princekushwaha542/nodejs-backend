@@ -9,7 +9,23 @@ const app = express(); //create a server using express
 // })
 const notes=[]
 
+app.use(express.json()) //middleware to parse json data from request body
 app.post('/notes',(req,res)=>{
     console.log(req.body);
+    notes.push(req.body);
+    res.status(201).json({
+        message:'Note created successfully',
+    });
+    
 })
+
+
+app.get('/notes',(req,res)=>{
+    res.status(200).json({
+        message: "notes recived",
+        notes:notes
+    });
+    
+})
+
 module.exports = app;
