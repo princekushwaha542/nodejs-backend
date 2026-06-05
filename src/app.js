@@ -50,9 +50,5 @@ app.patch("/notes/:index",(req, res)=>{
     })
 })
 
-if(!notes[index]){
-    return res.status(404).json({
-        message:'Note not found'
-    })
-}
+
 module.exports = app;
