@@ -25,6 +25,13 @@ app.get('/notes',async(req,res)=>{
         notes : notes
     })
 })
+app.delete("/notes/:id", async (req, res)=>{
+    const id = req.params.id;
+    await noteModel.findByIdAndDelete(id);
+    res.status(200).json({
+        message: 'Note deleted successfully',
+    })
+})
 
 // app.get('/notes',(req,res)=>{
 //     console.log(req.body);
