@@ -33,6 +33,16 @@ app.delete("/notes/:id", async (req, res)=>{
     })
 })
 
+app.patch("/notes/:id",async (req, res)=>{
+    const id = req.params.id;
+    const description = req.body.description;
+    await noteModel.findByIdAndUpdate(id,{
+        description: description
+    })
+    res.status(200).json({
+        message: 'Note updated successfully',
+    })
+})
 // app.get('/notes',(req,res)=>{
 //     console.log(req.body);
 //     res.status(200).json({
