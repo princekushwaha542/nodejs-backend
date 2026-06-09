@@ -20,6 +20,7 @@
   "homepage": "https://github.com/princekushwaha542/nodejs-backend#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "mongoose": "^9.6.3"
+    "mongoose": "^9.6.3",
+    "multer": "^2.1.1"
   }
 }
