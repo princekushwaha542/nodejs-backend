@@ -2,7 +2,6 @@ const express = require('express');
 const noteModel = require('./models/note.model');
 const app = express(); //create a server using express
 
-app.use(express.json())//middleware to parse json data from request body
 
 
 app.post('/notes', async (req, res) => {
