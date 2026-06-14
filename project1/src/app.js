@@ -1,15 +1,28 @@
-const express = require('express')
-const multer = require('multer') // install multer 
-const uploadFile = require("../service/storage.service")
-const app = express();
-app.use(express.json());// middleware to parse json data
-const upload = multer({storage : multer.memoryStorage()})
+const express = require('express');
+const multer = require('multer');
+const uploadFile = require('../service/storage.service');
 
-app.post("/create-post", upload.single('image'),async (req,res) =>{
+const app = express();
+
+app.use(express.json());
+
+const upload = multer({
+    storage: multer.memoryStorage()
+});
+
+app.post('/create-post', upload.single('image'), async (req, res) => {
     console.log(req.body);
     console.log(req.file);
+
+    if (!req.file) {
+        return res.status(400).json({
+            message: 'No file uploaded'
+        });
+    }
+
     const result = await uploadFile(req.file.buffer);
-    console.log(result);
-})
+
+    res.json(result);
+});
 
 module.exports = app;
