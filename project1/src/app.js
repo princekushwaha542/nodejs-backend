@@ -10,10 +10,12 @@ const upload = multer({
     storage: multer.memoryStorage()
 });
 
-app.post('/create-post', upload.single('image'), async (req, res) => {
+app.post('/create-post', 
+    upload.single('image'), 
+    async (req, res) => {
+        
     console.log(req.body);
     console.log(req.file);
-
     if (!req.file) {
         return res.status(400).json({
             message: 'No file uploaded'
