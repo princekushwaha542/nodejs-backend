@@ -1,37 +1,22 @@
 const express = require('express');
 const multer = require('multer');
-const uploadFile = require('../service/storage.service');
+const uploadFile = require('./service/storage.service');
 
-const router = express.Router();
+const app = express();
 
+app.use(express.json());
 const upload = multer({
+    
     storage: multer.memoryStorage()
 });
 
-router.post('/create-post', upload.single('image'), async (req, res) => {
-    try {
-        console.log("Body:", req.body);
-        console.log("File:", req.file);
-
-        if (!req.file) {
-            return res.status(400).json({
-                message: "Image is required"
-            });
-        }
-
-        const file = await uploadFile(req.file);
-
-        res.status(201).json({
-            message: "Post created successfully",
-            imageUrl: file
-        });
-
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({
-            message: "Internal Server Error"
-        });
-    }
+app.post('/create-post', upload.single('image'), async (req, res) => {
+        
+    console.log(req.body);
+    console.log(req.file);
+   
+    const result = await uploadFile(req.file.buffer);
+    console.log(result);
 });
 
-module.exports = router;
+module.exports = app;
