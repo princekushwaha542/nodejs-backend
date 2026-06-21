@@ -1,20 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CreatePost from './pages/CreatePost';
+import { createHmacSha1 } from '@imagekit/nodejs/lib/crypto-utils.mjs';
 
-const Home = () => {
-  return <h1>Hello</h1>;
-};
-
-const About = () => {
-  return <h1>About Page</h1>;
-};
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/create-post" element={<CreatePost/>} />
+        <Route path="/about" element={<h1>hello</h1>} />
       </Routes>
     </Router>
   );
