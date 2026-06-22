@@ -11,7 +11,7 @@ const [posts , setpost] = useState([
 ])
 
  return (
-  <section>
+  <section className='feed-section'>
     {posts.length > 0 ? (
       posts.map((post) => (
         <div key={post._id} className='post-card'>
