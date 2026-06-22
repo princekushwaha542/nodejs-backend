@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CreatePost from './pages/CreatePost';
+import Feed from './pages/Feed';
+
 import { createHmacSha1 } from '@imagekit/nodejs/lib/crypto-utils.mjs';
 
 
@@ -9,7 +11,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/create-post" element={<CreatePost/>} />
-        <Route path="/about" element={<h1>hello</h1>} />
+        <Route path="/feed" element={<Feed />} />
       </Routes>
     </Router>
   );
