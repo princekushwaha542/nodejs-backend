@@ -59,7 +59,7 @@ html{
 .feed-sction{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:start;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
@@ -69,13 +69,15 @@ html{
 }
 .post-card{
   background-color: white;
-  padding: 20px;
+  margin-top: 20px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgb(56, 56, 56);
   width: 400px;
   margin-bottom: 200px;
 }
 .post-card img{
+ 
   max-width: 100%;
 }
 .post-card h3{
