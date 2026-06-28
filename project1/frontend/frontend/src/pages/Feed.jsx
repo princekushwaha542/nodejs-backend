@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
+import axios from axios 
 import { useActionState } from 'react'
 const Feed = () => {
 const [posts , setpost] = useState([
@@ -9,6 +10,12 @@ const [posts , setpost] = useState([
   
   }
 ])
+useEffect(()=>{
+  axios.get("http://localhost:3000/create-post")
+  .then((res)=>{
+    console.log(res.data);
+  })
+})
 
  return (
   <section className='feed-section'>
