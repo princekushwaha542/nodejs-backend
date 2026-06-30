@@ -11,13 +11,12 @@ const Feed = () => {
   ]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/create-post")
+    axios.get("http://localhost:3000/posts")
       .then((res) => {
-        console.log(res.data);
+        setpost(res.data.posts)
+        console.log(res.data)
       })
-      .catch((err) => {
-        console.log(err);
-      });
+     
   }, []);
 
   return (
