@@ -3,20 +3,14 @@ import axios from 'axios';
 
 const Feed = () => {
   const [posts, setpost] = useState([
-    {
-      _id: "1",
-      caption: "test_caption",
-      image: "https://ik.imagekit.io/gwffhfxyd/image_ZAgvVmc4z.jpg",
-    }
-  ]);
+]);
 
   useEffect(() => {
     axios.get("http://localhost:3000/posts")
       .then((res) => {
         setpost(res.data.posts)
-        console.log(res.data)
+        console.log(res.data.posts)
       })
-     
   }, []);
 
   return (
