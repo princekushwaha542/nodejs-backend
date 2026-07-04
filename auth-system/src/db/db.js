@@ -11,3 +11,5 @@
             console.error('Error connecting to database:', error)
         }
     }
+
+    module.exports = connectDB;
