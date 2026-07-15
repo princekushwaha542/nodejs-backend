@@ -1,16 +1,19 @@
 import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Skills from "@/components/sections/Skills";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
     <>
       <Navbar />
 
-      <main className="pt-20">
-        <section className="min-h-screen flex items-center justify-center">
-          <h1 className="text-5xl font-bold">
-            Portfolio Working 🚀
-          </h1>
-        </section>
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
       </main>
     </>
   );

@@ -1,20 +1,19 @@
-"use client";
-
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-
-export default function ThemeProvider({
+import SmoothScroll from "@/components/layout/SmoothScroll";
+import ThemeProvider from "@/components/layout/ThemeProvider";
+import CustomCursor from "@/components/effects/CustomCursor";
+export default function Providers({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem={false}
-      disableTransitionOnChange
-    >
+  <ThemeProvider>
+    <SmoothScroll>
+      <CustomCursor />
+
       {children}
-    </NextThemesProvider>
-  );
+
+    </SmoothScroll>
+  </ThemeProvider>
+);
 }
