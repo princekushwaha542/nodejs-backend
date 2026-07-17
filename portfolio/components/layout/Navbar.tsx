@@ -114,7 +114,7 @@ export default function Navbar() {
           <span className="text-cyan-400">
             .
           </span>
-
+          exe
         </a>
 
 

@@ -6,7 +6,6 @@ import Container from "@/components/shared/Container";
 import Section from "@/components/shared/Section";
 import SectionHeading from "@/components/shared/SectionHeading";
 
-import ServiceCard from "@/components/cards/ServiceCard";
 import { services } from "@/data/services";
 
 export default function Services() {
@@ -39,7 +38,6 @@ export default function Services() {
                 delay: index * 0.15,
               }}
             >
-              <ServiceCard service={service} />
             </motion.div>
           ))}
         </div>

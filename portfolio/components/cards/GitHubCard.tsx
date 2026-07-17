@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+
 
 type Repository = {
   name: string;
@@ -66,12 +66,7 @@ export default function GitHubCard({
           </div>
         </div>
 
-        <ArrowUpRight
-          className="
-            transition
-            group-hover:rotate-45
-          "
-        />
+       
       </div>
 
       <p
@@ -93,7 +88,6 @@ export default function GitHubCard({
           text-cyan-400
         "
       >
-        <Github size={18} />
 
         <span className="font-medium">
           View Repository

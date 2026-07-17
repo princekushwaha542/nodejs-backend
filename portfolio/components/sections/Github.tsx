@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Github, ArrowUpRight } from "lucide-react";
 
 import Container from "@/components/shared/Container";
 import Section from "@/components/shared/Section";
@@ -83,9 +82,7 @@ export default function GitHub() {
                 hover:bg-cyan-400
               "
             >
-              <Github size={18} />
               View Profile
-              <ArrowUpRight size={18} />
             </a>
           </div>
         </motion.div>
