@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Providers from "./providers";
+import Reveal from "@/components/animations/Reveal";
 import "./globals.css";
+
+import Providers from "./providers";
+
+import ScrollProgress from "@/components/layout/ScrollProgress";
+import MouseGlow from "@/components/layout/MouseGlow";
+import CustomCursor from "@/components/layout/CustomCursor";
+import BackToTop from "@/components/layout/BackToTop";
+import Footer from "@/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://your-domain.vercel.app"),
 
   title: {
     default: "Prince Kushwaha | Full Stack Developer",
@@ -22,7 +30,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Full Stack Developer specializing in React, Next.js, Node.js, Express, MongoDB and modern web experiences.",
+    "Portfolio of Prince Kushwaha, Full Stack Developer specializing in React, Next.js, Node.js, Express.js and MongoDB.",
 
   keywords: [
     "Prince Kushwaha",
@@ -32,9 +40,12 @@ export const metadata: Metadata = {
     "Node.js",
     "Express.js",
     "MongoDB",
+    "JavaScript",
     "TypeScript",
-    "Frontend Developer",
+    "Tailwind CSS",
     "Full Stack Developer",
+    "Frontend Developer",
+    "MERN Stack",
   ],
 
   authors: [
@@ -47,17 +58,37 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Prince Kushwaha | Full Stack Developer",
+
     description:
-      "Building premium digital experiences with modern web technologies.",
-    type: "website",
+      "Building modern, scalable and beautiful web experiences using React, Next.js and Node.js.",
+
+    url: "https://your-domain.vercel.app",
+
+    siteName: "Prince Portfolio",
+
     locale: "en_US",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/og/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Prince Kushwaha Portfolio",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
+
     title: "Prince Kushwaha | Full Stack Developer",
+
     description:
-      "Building premium digital experiences with modern web technologies.",
+      "Building modern, scalable and beautiful web experiences.",
+
+    images: ["/og/og-image.png"],
   },
 };
 
@@ -72,8 +103,34 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="bg-background text-foreground antialiased">
-        <Providers>{children}</Providers>
+      <body
+      
+        className="
+          bg-background
+          text-foreground
+          antialiased
+          overflow-x-hidden
+        "
+      >
+        {/* Scroll Progress */}
+        <ScrollProgress />
+
+        {/* Mouse Glow */}
+        <MouseGlow />
+
+        {/* Custom Cursor */}
+        <CustomCursor />
+
+        {/* Main App */}
+        <Providers>
+          {children}
+        </Providers>
+
+        {/* Back To Top */}
+        <BackToTop />
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );

@@ -4,6 +4,14 @@
   --background: #050816;
   --foreground: #f8fafc;
 }
+body {
+  cursor: none;
+}
+
+a,
+button {
+  cursor: none;
+}
 
 @theme inline {
   --color-background: var(--background);
