@@ -2,31 +2,63 @@ export const projects = [
   {
     title: "Prince's Jukebox",
     description:
-      "Modern music streaming UI built with React and Tailwind CSS.",
+      "Modern music streaming web application with beautiful UI and responsive design.",
+
     image: "/projects/jukebox.png",
+
     github: "https://github.com/princekushwaha542",
+
     live: "https://princesjukebox.netlify.app",
+
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+    ],
+
     featured: true,
-    tech: ["React", "Tailwind CSS", "JavaScript"],
   },
+
   {
     title: "HR Management System",
+
     description:
-      "Employee management dashboard with authentication and CRUD features.",
+      "Employee management dashboard with authentication, CRUD operations and modern admin interface.",
+
     image: "/projects/hr.png",
+
     github: "https://github.com/princekushwaha542",
+
     live: "#",
+
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
+
     featured: false,
-    tech: ["React", "Node.js", "MongoDB"],
   },
+
   {
     title: "Backend Hub",
+
     description:
-      "REST APIs, JWT authentication, MongoDB and Express backend projects.",
+      "REST API collection with JWT authentication, MongoDB integration and secure backend architecture.",
+
     image: "/projects/backend.png",
+
     github: "https://github.com/princekushwaha542",
+
     live: "#",
+
+    tech: [
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
+
     featured: false,
-    tech: ["Node.js", "Express", "MongoDB"],
   },
 ];

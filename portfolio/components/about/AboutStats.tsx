@@ -15,7 +15,7 @@ const stats = [
     title: "Technologies",
   },
   {
-    number: 500,
+    number: 1500,
     suffix: "+",
     title: "Learning Hours",
   },
