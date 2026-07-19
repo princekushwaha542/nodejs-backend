@@ -68,7 +68,7 @@ export default function HeroContent() {
         {/* Resume */}
 
         <a
-          href="/Prince_Kushwaha_Resume.pdf"
+          href="/Prince_Kushwaha_Resume.PDF"
           download
           className="
             inline-flex
