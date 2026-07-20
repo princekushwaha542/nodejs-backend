@@ -109,12 +109,11 @@ export default function Navbar() {
           tracking-tight
           "
         >
+         
+         <span className="absolute pl-10">PRINCE</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_dXLrFg9sWKRcpMcbSh-tx79GnAIjHGbkmIRc3QMPw&s=10" alt="Logo" width={32} height={32}  />
 
-          Prince
-          <span className="text-cyan-400">
-            .
-          </span>
-          exe
+          
         </a>
 
 
