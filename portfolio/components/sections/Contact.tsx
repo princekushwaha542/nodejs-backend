@@ -36,7 +36,7 @@ ${message}
 `;
 
     window.open(
-      `https://wa.me/917000782975?text=${encodeURIComponent(
+      `https://wa.me/918966952127?text=${encodeURIComponent(
         text
       )}`,
       "_blank"
