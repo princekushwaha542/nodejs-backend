@@ -9,7 +9,7 @@ router.get('/test', (req, res) => {
     console.log("cookies", req.cookies);
     res.status(200).json({
         message: "test route working",
-        cookies : req.cookies
+        cookies: req.cookies
     })  
 })
 
